@@ -26,13 +26,15 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <dic class="clearfix weather-temperature">
-                <img src="" alt="clear" id="icon" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperature">40</strong>
-                  <span class="units">°C</span>
-                </div>
-              </dic>
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="clear"
+                  id="icon"
+                />
+                <span><strong id="temperature">40</strong></span>
+                <span class="units">°C | <a href="">°F</a></span>
+              </div>
             </div>
             <div class="col-6">
               <ul>
@@ -41,11 +43,11 @@
               </ul>
             </div>
           </div>
-          <small>
-            <a href="" target="_blank">Open source code</a>
-            by Codruta Blaga
-          </small>
         </div>
+        <small>
+          <a href="" target="_blank">Open source code</a>
+          by Codruta Blaga
+        </small>
       </div>
     </div>
     <script src="src/app.js"></script>

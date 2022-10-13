@@ -24,7 +24,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
-  )}°C`;
+  )}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
@@ -54,11 +54,12 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
+/*
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+*/
 //conversion
 function convertToFahrenheit(event) {
   event.preventDefault();

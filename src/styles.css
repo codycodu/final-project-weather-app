@@ -4,10 +4,10 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -97,6 +97,7 @@ li {
 
 #searchButton {
   background-color: #828096;
+  color: #ffffff;
   border: none;
   border-radius: 20px;
   padding-bottom: 10px;
@@ -105,7 +106,8 @@ li {
 }
 
 #current-location-btn {
-  background-color: #fecf98;
+  background-color: rgba(130, 128, 150, 0.384);
+  color: #ffffff;
   border: none;
   border-radius: 20px;
   padding-bottom: 10px;

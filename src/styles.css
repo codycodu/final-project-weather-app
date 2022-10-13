@@ -1,5 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
 }
 
 h1 {
@@ -29,9 +30,11 @@ li {
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #dadde1;
+  padding: 50px;
+  background-color: rgb(255, 226, 217, 0.2);
+  border: 1px solid rgb(218, 221, 225, 0.5);
   border-radius: 5px;
+  margin-top: 200px;
 }
 
 .overview {
@@ -48,4 +51,74 @@ li {
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
+}
+
+.container-sm {
+  display: block;
+  margin: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
+.dayAndTime {
+  font-size: 20px;
+  color: black;
+}
+
+.extras {
+  position: relative;
+  color: rgb(99, 98, 98);
+  left: 20px;
+  right: 20px;
+  top: 10px;
+  bottom: 20px;
+}
+
+.basic-info {
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+.fahrenheit {
+  text-decoration: none;
+}
+
+#location {
+  background-color: #ffe2d9;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-inline-start: 15px;
+}
+
+#searchButton {
+  background-color: #828096;
+  border: none;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-inline: 15px;
+}
+
+#current-location-btn {
+  background-color: #fecf98;
+  border: none;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-inline: 15px;
+}
+
+#temp {
+  position: relative;
+  font-size: 80px;
+  padding-left: 35px;
+}
+
+#description {
+  text-transform: capitalize;
 }

@@ -25,6 +25,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
@@ -54,36 +55,49 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-/*
+
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-*/
-//conversion
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
-}
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
+
+let currentLocationButton = document.querySelector("#current-location-btn");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 /*
 //date
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 */
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#current-location-btn");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+//conversion
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitLink = document.querySelector(".fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 searchCity("Lincoln");
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 /*
 function signUp(event) {

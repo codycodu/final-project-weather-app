@@ -95,6 +95,10 @@ li {
   padding-inline-start: 15px;
 }
 
+location: {
+  border: 1px solid #f0d3ca;
+}
+
 #searchButton {
   background-color: #828096;
   color: #ffffff;
@@ -123,4 +127,8 @@ li {
 
 #description {
   text-transform: capitalize;
+}
+
+#celsius {
+  cursor: pointer;
 }

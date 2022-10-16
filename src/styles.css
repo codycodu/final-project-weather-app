@@ -113,8 +113,12 @@ li {
   padding-inline-start: 15px;
 }
 
-location: {
-  border: 1px solid #f0d3ca;
+#location:hover {
+  border: 1px solid #ffe2d9;
+}
+
+#location:checked {
+  border: 1px solid #ffe2d9;
 }
 
 #searchButton {
@@ -127,6 +131,11 @@ location: {
   padding-inline: 15px;
 }
 
+#searchButton:hover {
+  background-color: #ffffffaa;
+  color: #828096;
+}
+
 #current-location-btn {
   background-color: rgba(130, 128, 150, 0.384);
   color: #ffffff;
@@ -135,6 +144,10 @@ location: {
   padding-bottom: 10px;
   padding-top: 10px;
   padding-inline: 15px;
+}
+
+#current-location-btn:hover {
+  background-color: #828096;
 }
 
 #temp {

@@ -146,7 +146,3 @@ location: {
 #description {
   text-transform: capitalize;
 }
-
-#celsius {
-  cursor: pointer;
-}

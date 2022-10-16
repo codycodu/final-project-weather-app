@@ -75,7 +75,6 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
-  celsiusTemperature = response.data.main.temp;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
@@ -127,30 +126,7 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //conversion
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-let fahrenheitLink = document.querySelector(".fahrenheit");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
 searchCity("Lincoln");
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-displayForecast();
 /*
 function signUp(event) {
   console.log(event);
